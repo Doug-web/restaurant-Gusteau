@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Gusteau's - La Brigade{% endblock %}
+
+{% block content %}
+<!-- ======== PAGE BRIGADE ======== -->
+<div class="container">
+    <h2 class="page-title">Notre Brigade</h2>
+    <div class="brigade-grid">
+        <div class="member-card">
+            <img src="{% static 'images/colette-tatou.avif' %}" alt="Colette Tatou">
+            <h3>Colette Tatou</h3>
+            <h4>Chef Exécutif</h4>
+            <p>La gardienne de l'excellence, alliant technique et caractère.</p>
+        </div>
+        <div class="member-card">
+            <img src="{% static 'images/alfredo-linguini.avif' %}" alt="Alfredo Linguini">
+            <h3>Alfredo Linguini</h3>
+            <h4>Chef de Partie</h4>
+            <p>Le lien entre la tradition et l'innovation, doté d'un talent inné.</p>
+        </div>
+         <div class="member-card">
+            <img src="{% static 'images/petit-chef.avif' %}" alt="Chef Rémy">
+            <h3>Le 'Petit Chef'</h3>
+            <h4>Inspiration & Création</h4>
+            <p>Le secret le mieux gardé de nos cuisines, l'âme de notre nouvelle carte.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

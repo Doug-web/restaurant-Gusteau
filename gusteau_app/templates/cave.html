@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Gusteau's - La Cave{% endblock %}
+
+{% block content %}
+<!-- ======== PAGE CAVE ======== -->
+<div class="container">
+    <h2 class="page-title">Notre Sélection de Vins</h2>
+    <div class="menu-category">
+        <h3>Vins Rouges</h3>
+        <div class="wine-item">
+            <div class="menu-item-content">
+                <img src="{% static 'images/vin-rouge.avif' %}" alt="Château Latour">
+                <div class="menu-item-details">
+                    <h4>Château Latour, Pauillac, 1995</h4>
+                    <p>Grand Cru Classé, aux arômes de fruits noirs et d'épices.</p>
+                </div>
+            </div>
+            <span class="wine-item-price">120€</span>
+        </div>
+        <div class="wine-item">
+            <div class="menu-item-content">
+                <img src="{% static 'images/vin-rouge.avif' %}" alt="Romanée-Conti">
+                <div class="menu-item-details">
+                    <h4>Romanée-Conti, Bourgogne, 2005</h4>
+                    <p>L'un des vins les plus prestigieux au monde, d'une complexité exceptionnelle.</p>
+                </div>
+            </div>
+            <span class="wine-item-price">350€</span>
+        </div>
+    </div>
+    <div class="menu-category">
+        <h3>Vins Blancs</h3>
+        <div class="wine-item">
+            <div class="menu-item-content">
+                <img src="{% static 'images/vin-rouge.avif' %}" alt="Sancerre">
+                <div class="menu-item-details">
+                    <h4>Sancerre 'Les Monts Damnés', Loire</h4>
+                    <p>Un sauvignon blanc minéral et élégant aux notes d'agrumes.</p>
+                </div>
+            </div>
+            <span class="wine-item-price">75€</span>
+        </div>
+    </div>
+    <div class="menu-category">
+        <h3>Champagnes</h3>
+        <div class="wine-item">
+            <div class="menu-item-content">
+                <img src="{% static 'images/vin-rouge.avif' %}" alt="Dom Pérignon">
+                <div class="menu-item-details">
+                    <h4>Dom Pérignon, 2008</h4>
+                    <p>Élégant et complexe, aux notes de fruits blancs et de brioche.</p>
+                </div>
+            </div>
+            <span class="wine-item-price">180€</span>
+        </div>
+    </div>
+</div>
+{% endblock %}

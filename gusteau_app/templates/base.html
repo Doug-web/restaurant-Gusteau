@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Gusteau's - Tout le monde peut cuisiner{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'gusteaus_app:index' %}" class="logo">Gusteau's</a>
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{% url 'gusteaus_app:index' %}" class="{% if request.resolver_match.url_name == 'index' %}nav-active{% endif %}">Accueil</a></li>
+                <li><a href="{% url 'gusteaus_app:menu' %}" class="{% if request.resolver_match.url_name == 'menu' %}nav-active{% endif %}">Le Menu</a></li>
+                <li><a href="{% url 'gusteaus_app:cave' %}" class="{% if request.resolver_match.url_name == 'cave' %}nav-active{% endif %}">La Cave</a></li>
+                <li><a href="{% url 'gusteaus_app:brigade' %}" class="{% if request.resolver_match.url_name == 'brigade' %}nav-active{% endif %}">La Brigade</a></li>
+                <li><a href="{% url 'gusteaus_app:galerie' %}" class="{% if request.resolver_match.url_name == 'galerie' %}nav-active{% endif %}">Galerie</a></li>
+                <li><a href="{% url 'gusteaus_app:critique' %}" class="{% if request.resolver_match.url_name == 'critique' %}nav-active{% endif %}">La Critique</a></li>
+                <li><a href="{% url 'gusteaus_app:histoire' %}" class="{% if request.resolver_match.url_name == 'histoire' %}nav-active{% endif %}">Notre Histoire</a></li>
+                <li><a href="{% url 'gusteaus_app:contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}nav-active{% endif %}">Réserver</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Gusteau's Restaurant, Paris. Tous droits réservés.</p>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

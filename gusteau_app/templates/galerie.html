@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Gusteau's - Galerie{% endblock %}
+
+{% block content %}
+<!-- ======== PAGE GALERIE ======== -->
+<div class="container">
+    <h2 class="page-title">Une Ambiance Unique</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="{% static 'images/salle-restaurant.avif' %}" alt="Salle du restaurant"></div>
+        <div class="gallery-item"><img src="{% static 'images/ratatouille.avif' %}" alt="La fameuse ratatouille"></div>
+        <div class="gallery-item"><img src="{% static 'images/cuisine-action.avif' %}" alt="Cuisine en action"></div>
+        
+        <div class="gallery-item"><img src="{% static 'images/table-detail.avif' %}" alt="Détail d'une table"></div>
+        <div class="gallery-item"><img src="{% static 'images/dessert-signature.avif' %}" alt="Dessert signature"></div>
+    </div>
+</div>
+{% endblock %}

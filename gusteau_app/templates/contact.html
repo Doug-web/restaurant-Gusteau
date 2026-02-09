@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Gusteau's - Réserver{% endblock %}
+
+{% block content %}
+<!-- ======== PAGE CONTACT ======== -->
+<div class="container">
+    <h2 class="page-title">Réserver & Nous Trouver</h2>
+    <div class="contact-grid">
+        <div class="contact-info">
+            <h3>Contactez-nous</h3>
+            <ul>
+                <li><strong>Adresse:</strong> 15, rue de la Montagne, 75005 Paris</li>
+                <li><strong>Téléphone:</strong>  06 547 74 43</li>
+                <li><strong>Email:</strong> contact@gusteaus.fr</li>
+                <li><strong>WhatsApp:</strong> 06 786 52 83</li>
+            </ul>
+            <h3>Horaires d'Ouverture</h3>
+            <ul>
+                <li><strong>Mardi - Samedi:</strong> 19h00 - 23h00</li>
+                <li><strong>Dimanche & Lundi:</strong> Fermé</li>
+            </ul>
+            
+            <div style="margin-top: 2rem; padding: 1rem; background-color: #f0f8f0; border-radius: 5px;">
+                <h3>Réserver via WhatsApp</h3>
+                <p>Remplissez le formulaire et nous vous contacterons sur WhatsApp pour confirmer votre réservation.</p>
+            </div>
+        </div>
+        <div class="contact-form">
+            <h3>Demande de réservation WhatsApp</h3>
+            <form id="whatsapp-form">
+                <div class="form-group">
+                    <label for="name">Nom *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Téléphone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date souhaitée *</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Heure souhaitée *</label>
+                    <select id="time" name="time" required>
+                        <option value="">Sélectionnez une heure</option>
+                        <option value="19:00">19:00</option>
+                        <option value="19:30">19:30</option>
+                        <option value="20:00">20:00</option>
+                        <option value="20:30">20:30</option>
+                        <option value="21:00">21:00</option>
+                        <option value="21:30">21:30</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Nombre de personnes *</label>
+                    <select id="guests" name="guests" required>
+                        <option value="">Sélectionnez</option>
+                        <option value="1">1 personne</option>
+                        <option value="2">2 personnes</option>
+                        <option value="3">3 personnes</option>
+                        <option value="4">4 personnes</option>
+                        <option value="5">5 personnes</option>
+                        <option value="6">6 personnes</option>
+                        <option value="7">7 personnes</option>
+                        <option value="8">8 personnes ou plus</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message supplémentaire (allergies, occasion spéciale, etc.)</label>
+                    <textarea id="message" name="message" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn">Envoyer la demande via WhatsApp</button>
+                <p style="font-size:0.8rem; margin-top:1rem; color: #666;">
+                    * En cliquant sur "Envoyer", vous serez redirigé vers WhatsApp avec votre demande de réservation pré-remplie.
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

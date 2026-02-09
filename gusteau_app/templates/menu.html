@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Gusteau's - Le Menu{% endblock %}
+
+{% block content %}
+<!-- ======== PAGE MENU ======== -->
+<div class="container">
+    <h2 class="page-title">La Carte de nos Saveurs</h2>
+    
+    <div class="menu-category">
+        <h3>Les Entrées</h3>
+        <div class="menu-item">
+            <div class="menu-item-content">
+                <img src="{% static 'images/veloute-asperges.avif' %}" alt="Velouté d'Asperges">
+                <div class="menu-item-details">
+                    <h4>Velouté d'Asperges 'Ego'</h4>
+                    <p>Une crème onctueuse pour ouvrir l'appétit des plus critiques.</p>
+                </div>
+            </div>
+            <span class="menu-item-price">18€</span>
+        </div>
+        <div class="menu-item">
+            <div class="menu-item-content">
+                <img src="{% static 'images/foie-gras.avif' %}" alt="Foie Gras">
+                <div class="menu-item-details">
+                    <h4>Foie Gras de Canard</h4>
+                    <p>Foie gras mi-cuit, chutney de figues et pain d'épices.</p>
+                </div>
+            </div>
+            <span class="menu-item-price">24€</span>
+        </div>
+    </div>
+    
+    <div class="menu-category">
+        <h3>Les Plats Principaux</h3>
+        <div class="menu-item">
+            <div class="menu-item-content">
+                <img src="{% static 'images/ratatouille.avif' %}" alt="Ratatouille">
+                <div class="menu-item-details">
+                    <h4>La Fameuse Ratatouille du Chef Rémy</h4>
+                    <p>Confit byaldi de légumes de saison, cuits à la perfection.</p>
+                </div>
+            </div>
+            <span class="menu-item-price">32€</span>
+        </div>
+        <div class="menu-item">
+            <div class="menu-item-content">
+                <img src="{% static 'images/filet-boeuf.avif' %}" alt="Filet de Bœuf">
+                <div class="menu-item-details">
+                    <h4>Filet de Bœuf 'Linguini'</h4>
+                    <p>Saisi à la perfection, accompagné de sa purée de pommes de terre truffée.</p>
+                </div>
+            </div>
+            <span class="menu-item-price">45€</span>
+        </div>
+        
+     
+    <div class="menu-category">
+        <h3>Les Desserts</h3>
+        <div class="menu-item">
+            <div class="menu-item-content">
+                <img src="{% static 'images/mille-feuille.avif' %}" alt="Mille-feuille">
+                <div class="menu-item-details">
+                    <h4>Mille-feuille 'Skinner'</h4>
+                    <p>Croustillant et imprévisible.</p>
+                </div>
+            </div>
+            <span class="menu-item-price">15€</span>
+        </div>
+        <div class="menu-item">
+            <div class="menu-item-content">
+                <img src="{% static 'images/souffle-chocolat.avif' %}" alt="Soufflé au Chocolat">
+                <div class="menu-item-details">
+                    <h4>Soufflé au Chocolat</h4>
+                    <p>Soufflé au chocolat noir, cœur coulant et glace à la vanille.</p>
+                </div>
+            </div>
+            <span class="menu-item-price">14€</span>
+        </div>
+    </div>
+</div>
+{% endblock %}

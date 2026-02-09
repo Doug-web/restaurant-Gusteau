@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- ======== PAGE ACCUEIL ======== -->
+<div class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{% static 'images/hero-bg.jpg' %}');">
+    <h1>Gusteau's</h1>
+    <p>Tout le monde peut cuisiner.</p>
+</div>
+<div class="teaser-section">
+    <div class="teaser-card">
+        <h3>Le Plat Signature</h3>
+        <p>Découvrez la fameuse Ratatouille qui a conquis Paris, un plat simple en apparence, mais profond en saveurs.</p>
+        <a href="{% url 'gusteaus_app:menu' %}" class="btn">Voir le menu</a>
+    </div>
+    <div class="teaser-card">
+        <h3>Notre Histoire</h3>
+        <p>De l'héritage d'Auguste Gusteau à la renaissance créative menée par une nouvelle génération de talents.</p>
+        <a href="{% url 'gusteaus_app:histoire' %}" class="btn">Lire notre histoire</a>
+    </div>
+    <div class="teaser-card">
+        <h3>Réservez Votre Table</h3>
+        <p>Vivez une expérience inoubliable au cœur de Paris. Réservez votre table pour une soirée mémorable.</p>
+        <a href="{% url 'gusteaus_app:contact' %}" class="btn">Réserver maintenant</a>
+    </div>
+</div>
+{% endblock %}
